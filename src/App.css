@@ -1,0 +1,128 @@
+.app {
+  min-height: 100vh;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  background-color: var(--bg-primary, #ffffff);
+  color: var(--text-primary, #333333);
+}
+
+.app-header {
+  background-color: var(--header-bg, #f5f5f5);
+  border-bottom: 1px solid var(--border-color, #e0e0e0);
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.app-title {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-primary, #333333);
+  transition: color 0.3s ease-in-out;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.user-profile-icon {
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.user-profile-icon:hover {
+  background-color: var(--hover-bg, rgba(0, 0, 0, 0.1));
+}
+
+.app-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.content {
+  background-color: var(--content-bg, #ffffff);
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 2px 8px var(--shadow-color, rgba(0, 0, 0, 0.1));
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.content h2 {
+  margin-top: 0;
+  color: var(--text-primary, #333333);
+  transition: color 0.3s ease-in-out;
+}
+
+.content p {
+  line-height: 1.6;
+  color: var(--text-secondary, #666666);
+  transition: color 0.3s ease-in-out;
+}
+
+.features {
+  margin-top: 2rem;
+}
+
+.features h3 {
+  color: var(--text-primary, #333333);
+  transition: color 0.3s ease-in-out;
+}
+
+.features ul {
+  list-style-position: inside;
+  color: var(--text-secondary, #666666);
+  transition: color 0.3s ease-in-out;
+}
+
+.features li {
+  margin: 0.5rem 0;
+  line-height: 1.6;
+}
+
+/* Dark mode styles */
+:root.dark {
+  --bg-primary: #1a1a1a;
+  --text-primary: #e0e0e0;
+  --text-secondary: #b0b0b0;
+  --header-bg: #2a2a2a;
+  --content-bg: #2a2a2a;
+  --border-color: #404040;
+  --shadow-color: rgba(0, 0, 0, 0.3);
+  --hover-bg: rgba(255, 255, 255, 0.1);
+  --focus-color: #5ba3f5;
+  --toggle-bg-light: #4a4a4a;
+  --toggle-bg-dark: #6a6a6a;
+  --icon-bg: #ffffff;
+}
+
+/* Light mode styles (default) */
+:root {
+  --bg-primary: #ffffff;
+  --text-primary: #333333;
+  --text-secondary: #666666;
+  --header-bg: #f5f5f5;
+  --content-bg: #ffffff;
+  --border-color: #e0e0e0;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --hover-bg: rgba(0, 0, 0, 0.1);
+  --focus-color: #4a90e2;
+  --toggle-bg-light: #e0e0e0;
+  --toggle-bg-dark: #4a4a4a;
+  --icon-bg: #ffffff;
+}
