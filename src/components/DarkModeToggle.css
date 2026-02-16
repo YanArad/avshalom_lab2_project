@@ -1,0 +1,65 @@
+.dark-mode-toggle-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dark-mode-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  transition: background-color 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dark-mode-toggle:hover {
+  background-color: var(--hover-bg, rgba(0, 0, 0, 0.1));
+}
+
+.dark-mode-toggle:focus {
+  outline: 2px solid var(--focus-color, #4a90e2);
+  outline-offset: 2px;
+}
+
+.toggle-switch {
+  width: 48px;
+  height: 24px;
+  border-radius: 12px;
+  position: relative;
+  transition: background-color 0.3s ease-in-out;
+  background-color: var(--toggle-bg-light, #e0e0e0);
+  display: flex;
+  align-items: center;
+  padding: 2px;
+}
+
+.toggle-switch.dark {
+  background-color: var(--toggle-bg-dark, #4a4a4a);
+}
+
+.toggle-icon {
+  font-size: 16px;
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: var(--icon-bg, #ffffff);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transform: translateX(0);
+}
+
+.toggle-switch.dark .toggle-icon {
+  transform: translateX(24px);
+}
+
+/* Dark mode styles */
+:root.dark .dark-mode-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
